@@ -10,12 +10,14 @@ from PIL import ImageFont
 def watermark():
     if state == True:
         img = Image.open(current_file_loc)
-        FONT = input_field.get().upper()
+        FONT = input_field.get().upper().strip()
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("arial.ttf", 24)
+        font = ImageFont.truetype("arial.ttf", int((img.size[1]//10)*(1/((len(FONT)*0.1)+1))))
         image_type = img.format.lower()
-        for i in range(0, img.size[0], 50):
-            draw.text((i, 0 + i), FONT, font=font, fill=(125, 125, 125))
+        distance = img.size[0] / len(FONT)
+        for i in range(0, len(FONT)):
+            draw.text((distance * i, (img.size[1] / img.size[0]) * distance * i), FONT[i], font=font,
+                      fill=(130, 130, 130))
         file_name = "wm_" + current_file_loc.split("/")[-1]
         save_location = filedialog.asksaveasfilename(filetypes=[("jpg or png", f".{image_type}")], initialfile=file_name)
         img.save(save_location)

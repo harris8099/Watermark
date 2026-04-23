@@ -1,5 +1,7 @@
 ***
 
+[![Documentation](https://img.shields.io/badge/Docs-Technical_Details-blue.svg)](docs/documentation.md)
+
 # 🖼️ Watermark Application
 
 A simple, lightweight Python tool that lets you add custom watermarks to your images with ease. Built using **Tkinter** for the graphical user interface (GUI) and **Pillow (PIL)** for image processing, it provides an intuitive interface where users can upload an image, type in a watermark, and save the securely branded picture. 💻✨

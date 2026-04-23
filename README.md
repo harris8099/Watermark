@@ -7,7 +7,7 @@ Here’s a polished **GitHub README** for your Watermark Application that makes 
 The **Watermark Application** is a simple Python tool that lets you add custom watermarks to your images with ease. Built using **Tkinter** for the graphical user interface (GUI) and **Pillow (PIL)** for image processing, it provides an intuitive interface where users can upload an image, type in a watermark, and save the modified picture. 💻✨
 
 ---
-
+## 🎥 Demo
 ![Watermark app](assets/demo.gif)
 
 ## 🚀 Features
